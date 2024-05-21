@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1033770444695",
+    "firebase_url": "https://fitnesse-c3ded-default-rtdb.firebaseio.com",
+    "project_id": "fitnesse-c3ded",
+    "storage_bucket": "fitnesse-c3ded.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033770444695:android:c084b72f27653efc4606d2",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI94zPMDtLlMqvJHwL6qW2j5coeQin7M0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033770444695:android:5b9c4a06a497b9244606d2",
+        "android_client_info": {
+          "package_name": "com.example.fitnesse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI94zPMDtLlMqvJHwL6qW2j5coeQin7M0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033770444695:android:dfd54d6df1bcdc884606d2",
+        "android_client_info": {
+          "package_name": "com.example.fitnesseapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI94zPMDtLlMqvJHwL6qW2j5coeQin7M0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

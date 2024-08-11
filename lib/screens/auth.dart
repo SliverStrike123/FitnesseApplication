@@ -22,7 +22,7 @@ class _AuthScreenState extends State<AuthScreen> {
   var _enteredPassword = '';
   var _enteredUsername = '';
   var _enteredPhoneNumber = '';
-  final _userRole = 'Trainer';
+  final _userRole = 'User';
   File? _selectedImage;
   var _isAuthenticating = false;
   void _submit() async {
@@ -53,11 +53,12 @@ class _AuthScreenState extends State<AuthScreen> {
             .doc(userCredentials.user!.uid)
             .set({
           'username': _enteredUsername,
-          'email': _enteredEmail,
+          'email': _enteredEmail.toLowerCase(),
           'phonenumber': _enteredPhoneNumber,
           'image_url': imageUrl,
           'userrole': _userRole
         });
+        
       }
     } on FirebaseAuthException catch (error) {
       if (error.code == 'email-already-in-use') {

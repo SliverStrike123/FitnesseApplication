@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:intl/intl.dart';
 
 class TrainerScheduleListView extends StatelessWidget {
   final String email;
@@ -17,6 +18,7 @@ class TrainerScheduleListView extends StatelessWidget {
         stream: FirebaseFirestore.instance
             .collection('schedule')
             .where('email', isEqualTo: email)
+            .where('schedule', isGreaterThan: Timestamp.fromDate(DateTime.now()))
             .snapshots(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -37,12 +39,14 @@ class TrainerScheduleListView extends StatelessWidget {
             itemCount: scheduleDocs.length,
             itemBuilder: (context, index) {
               final scheduleData = scheduleDocs[index].data() as Map<String, dynamic>;
-
+                Timestamp timestamp = scheduleData['schedule'];
+                DateTime dateTime = timestamp.toDate();
+                String formattedDate = DateFormat('yyyy-MM-dd, hh:mm a').format(dateTime);
               return Column(
                 children: [
                   ListTile(
                     title: Text('Client Name: ${scheduleData['clientname']}'),
-                    subtitle: Text('Time: ${scheduleData['schedule']}'),
+                    subtitle: Text('Time: ${formattedDate}'),
                   ),
                   const Divider(
                     color: Colors.black, // Set divider color to black

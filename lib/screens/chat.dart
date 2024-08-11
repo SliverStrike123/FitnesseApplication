@@ -10,17 +10,6 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Public Chat Room'),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.of(context).pop(true);
-            },
-            icon: Icon(
-              Icons.exit_to_app,
-              color: Theme.of(context).colorScheme.primary,
-            ),
-          ),
-        ],
       ),
       body: const Column(
         children: [

@@ -43,7 +43,7 @@ class _TrainerListAdminWidgetState extends State<TrainerListAdminWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
           title: Text('Trainer List',style: TextStyle(color: Colors.white,fontSize: 20),),
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           automaticallyImplyLeading: true,
           actions: [],
           centerTitle: true,

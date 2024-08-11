@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class TrainerProfile extends StatelessWidget {
+class Profile extends StatelessWidget {
   final String? name;
   final String? image;
   final String? phoneNumber;
 
-  const TrainerProfile.summary({
+  const Profile({
     super.key,
     required this.name,
     required this.image,

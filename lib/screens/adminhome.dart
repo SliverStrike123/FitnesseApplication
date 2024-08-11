@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fitnesseapplication/screens/admintrainerlist.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'chat.dart';
+import 'admin_applicant_list.dart';
+import 'statistical_dashboard_admin.dart';
 
 import 'package:fitnesseapplication/models/adminhomemodel.dart';
 export 'package:fitnesseapplication/models/adminhomemodel.dart';
@@ -106,10 +109,12 @@ class _AdminHomeWidgetState extends State<AdminHomeWidget> {
                   ),
                 ),
                 FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
+                  onPressed: () async {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => AdminApplicantList()),
+                    );
                   },
-                  text: 'Trainer Application',
+                  text: 'Trainer Applications',
                   options: FFButtonOptions(
                     height: 40,
                     padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
@@ -154,8 +159,10 @@ class _AdminHomeWidgetState extends State<AdminHomeWidget> {
                   ),
                 ),
                 FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
+                  onPressed: () async {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => StatiscalDashboard(firestore: FirebaseFirestore.instance,)),
+                    );
                   },
                   text: 'Statistical Dashboard',
                   options: FFButtonOptions(
